@@ -21,3 +21,4 @@ vendor
 spec/stepdoc
 .idea
 *.iml
+.ruby-version

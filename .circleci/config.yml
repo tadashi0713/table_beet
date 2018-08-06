@@ -1,0 +1,62 @@
+version: 2
+
+defaults: &defaults
+  docker:
+  - image: circleci/ruby:2.5.1
+
+  working_directory: ~/repo
+
+jobs:
+  install_dependencies:
+    <<: *defaults
+    steps:
+    - checkout
+
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "Gemfile.lock" }}
+        - v1-dependencies-
+
+    - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+    - save_cache:
+        paths:
+        - ./vendor/bundle
+        key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+    - persist_to_workspace:
+        root: ~/repo
+        paths:
+        - ./*
+
+  rubocop:
+    <<: *defaults
+    steps:
+    - attach_workspace:
+        at: ~/repo
+
+    - run: bundle --path vendor/bundle
+
+    - run: bundle exec rubocop
+
+  rspec:
+    <<: *defaults
+    steps:
+    - attach_workspace:
+        at: ~/repo
+
+    - run: bundle --path vendor/bundle
+
+    - run: bundle exec rake spec && bundle exec rspec --tag before_load spec
+
+workflows:
+  version: 2
+  test:
+    jobs:
+    - install_dependencies
+    - rubocop:
+        requires:
+        - install_dependencies
+    - rspec:
+        requires:
+        - install_dependencies
