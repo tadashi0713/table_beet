@@ -19,3 +19,5 @@ tmp
 vendor
 .DS_Store
 spec/stepdoc
+.idea
+*.iml
