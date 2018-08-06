@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# frozen_string_literal: true
+
 require 'method_source'
 
 module TableBeet
@@ -20,7 +21,7 @@ module TableBeet
     end
 
     def location
-      File.expand_path(@file) + ":" + @lineno.to_s
+      File.expand_path(@file) + ':' + @lineno.to_s
     end
   end
 end

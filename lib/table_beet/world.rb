@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/core/version'
 
 module TableBeet
@@ -6,7 +8,7 @@ module TableBeet
     # @return  [Hash]  The hash that { scope name => Array of ::TableBeet:Step }
     #
     def self.scopes
-      scopes = Hash.new {|hash, key| hash[key] = []}
+      scopes = Hash.new { |hash, key| hash[key] = [] }
 
       include_modules.each do |mod, tags|
         space = Space.new(mod)
@@ -33,14 +35,14 @@ module TableBeet
       end
     end
 
-      class Space
-        def initialize(mod)
-          extend(mod)
-        end
-
-        def define_steps
-          methods.grep(/^match: (?<name>.+)/) { $~[:name] }
-        end
+    class Space
+      def initialize(mod)
+        extend(mod)
       end
+
+      def define_steps
+        methods.grep(/^match: (?<name>.+)/) { $LAST_MATCH_INFO[:name] }
+      end
+    end
   end
 end

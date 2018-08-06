@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'table_beet/formatters/base_formatter.rb'
 
 module TableBeet

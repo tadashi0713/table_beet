@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'pathname'
 
 describe TableBeet::Loader do
-  context 'when not specify in the constructor argument', :before_load => true do
+  context 'when not specify in the constructor argument', before_load: true do
     let(:loader) do
       TableBeet::Loader.new
     end
@@ -14,7 +16,7 @@ describe TableBeet::Loader do
     end
   end
 
-  context 'when specify pattern that does not exist', :before_load => true do
+  context 'when specify pattern that does not exist', before_load: true do
     let(:loader) do
       TableBeet::Loader.new(suffix: '__hoge.rb', path: '/tmp')
     end

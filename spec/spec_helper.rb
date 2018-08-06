@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'coveralls'
 Coveralls.wear!
-
 
 if RSpec::Core::Version::STRING >= '3.2.0'
   require 'rspec/core/sandbox'
@@ -9,7 +10,6 @@ else
 
   # See: https://github.com/rspec/rspec-core/blob/v3.2.2/lib/rspec/core/sandbox.rb
   module RSpec
-
     class << self
       # For RSpec 3.1.x
       attr_writer :configuration, :world unless RSpec.respond_to?(:configuration=)

@@ -1,4 +1,6 @@
-step "Are you talking about :name !!!!!" do |name|
+# frozen_string_literal: true
+
+step 'Are you talking about :name !!!!!' do |name|
   expect(name).to eq('Kuririn')
 end
 

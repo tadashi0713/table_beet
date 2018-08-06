@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 steps_for :test do
-  REQUIRE_TEST = %w(cola pizza)
+  REQUIRE_TEST = %w[cola pizza].freeze
 
   #
   # When to run the test:

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'table_beet/reporter'
 require 'table_beet/loader'
 
@@ -13,7 +15,7 @@ module TableBeet
 
       # TOOD logger..?
       if number_of_load.zero?
-        puts "[warn] There are no loaded file with specified option."
+        puts '[warn] There are no loaded file with specified option.'
         puts "    finder => #{loader.display_pattern}"
       end
 
