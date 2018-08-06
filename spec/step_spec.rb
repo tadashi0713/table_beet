@@ -22,7 +22,7 @@ describe TableBeet::Step do
 
   describe '#location' do
     it 'should return location of source' do
-      expect(step.location).to include('global_steps.rb:1')
+      expect(step.location).to include('global_steps.rb:3')
       expect(step.location).to include(FIXTURES_PATH)
     end
   end
