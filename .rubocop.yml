@@ -12,3 +12,6 @@ LineLength:
 
 MethodLength:
   Max: 20
+
+MutableConstant:
+  Enabled: false
