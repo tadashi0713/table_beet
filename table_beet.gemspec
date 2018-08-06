@@ -2,11 +2,10 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'table_beet/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'table_beet'
-  gem.version       = TableBeet::VERSION
+  gem.version       = '0.0.4'
   gem.authors       = ['Tadashi Nemoto']
   gem.email         = ['tadashi.nemoto0713@gmail.com']
   gem.description   = 'Reference generator for Turnip steps of exists'
