@@ -1,0 +1,17 @@
+AbcSize:
+  Enabled: false
+
+BlockLength:
+  Max: 100
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 150
+
+MethodLength:
+  Max: 20
+
+MutableConstant:
+  Enabled: false

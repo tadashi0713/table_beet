@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/core/version'
 
 module TableBeet
@@ -6,7 +8,7 @@ module TableBeet
     # @return  [Hash]  The hash that { scope name => Array of ::TableBeet:Step }
     #
     def self.scopes
-      scopes = Hash.new {|hash, key| hash[key] = []}
+      scopes = Hash.new { |hash, key| hash[key] = [] }
 
       include_modules.each do |mod, tags|
         space = Space.new(mod)
@@ -23,8 +25,6 @@ module TableBeet
       scopes
     end
 
-    private
-
     def self.include_modules
       if RSpec::Core::Version::STRING >= '3.2.0'
         RSpec.configuration.instance_variable_get(:@include_modules).items_and_filters
@@ -33,14 +33,14 @@ module TableBeet
       end
     end
 
-      class Space
-        def initialize(mod)
-          extend(mod)
-        end
-
-        def define_steps
-          methods.grep(/^match: (?<name>.+)/) { $~[:name] }
-        end
+    class Space
+      def initialize(mod)
+        extend(mod)
       end
+
+      def define_steps
+        methods.grep(/^match: (?<name>.+)/) { $LAST_MATCH_INFO[:name] }
+      end
+    end
   end
 end

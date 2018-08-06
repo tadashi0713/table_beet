@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'table_beet/world'
 require 'table_beet/formatters/text_formatter'
 require 'table_beet/formatters/oneline_formatter'

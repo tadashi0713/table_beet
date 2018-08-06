@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe TableBeet::Step do
@@ -8,7 +10,7 @@ describe TableBeet::Step do
 
   describe '#id' do
     it 'should return method id' do
-      expect(step.id).to be_instance_of(Fixnum)
+      expect(step.id).to be_instance_of(Integer)
     end
   end
 
@@ -20,7 +22,7 @@ describe TableBeet::Step do
 
   describe '#location' do
     it 'should return location of source' do
-      expect(step.location).to include("global_steps.rb:1")
+      expect(step.location).to include('global_steps.rb:3')
       expect(step.location).to include(FIXTURES_PATH)
     end
   end
