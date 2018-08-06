@@ -25,8 +25,6 @@ module TableBeet
       scopes
     end
 
-    private
-
     def self.include_modules
       if RSpec::Core::Version::STRING >= '3.2.0'
         RSpec.configuration.instance_variable_get(:@include_modules).items_and_filters

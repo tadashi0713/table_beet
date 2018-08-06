@@ -1,4 +1,6 @@
 # frozen_string_literal: true
 
-module TableBeet::Formatters
+module TableBeet
+  module Formatters
+  end
 end
