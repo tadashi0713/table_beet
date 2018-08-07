@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
 
   gem.add_dependency 'method_source'
-  gem.add_dependency 'slop'
+  gem.add_dependency 'slop', '~> 3.6.0'
   gem.add_dependency 'turnip', '>= 3.0.0'
   gem.add_development_dependency 'bundler'
   gem.add_development_dependency 'coveralls'
