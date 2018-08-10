@@ -6,5 +6,9 @@ gemfile:
   - Gemfile
   - gemfiles/rspec-3.6.x.gemfile
   - gemfiles/rspec-3.7.x.gemfile
+matrix:
+  allow_failures:
+  - gemfile:
+    - gemfiles/rspec-3.7.x.gemfile
 
 script: bundle exec rake spec && bundle exec rspec --tag before_load spec
