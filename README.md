@@ -2,14 +2,13 @@
 
 TableBeet is reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
 
-[![Build Status](https://travis-ci.org/gongo/table_beet.png?branch=master)](https://travis-ci.org/gongo/table_beet)
-[![Code Climate](https://codeclimate.com/github/gongo/table_beet.png)](https://codeclimate.com/github/gongo/table_beet)
-[![Dependency Status](https://gemnasium.com/gongo/table_beet.png)](https://gemnasium.com/gongo/table_beet)
-[![Coverage Status](https://coveralls.io/repos/gongo/table_beet/badge.png?branch=master)](https://coveralls.io/r/gongo/table_beet)
+[![Build Status](https://travis-ci.org/tadashi0713/table_beet.svg?branch=master)](https://travis-ci.org/tadashi0713/table_beet)
+[![Code Climate](https://codeclimate.com/github/tadashi0713/table_beet.png)](https://codeclimate.com/github/tadashi0713/table_beet)
+[![Coverage Status](https://coveralls.io/repos/tadashi0713/table_beet/badge.png?branch=master)](https://coveralls.io/r/tadashi0713/table_beet)
 
 # Requirements
 
-Ruby 2.0.0 or later
+Ruby 2.4.0 or later
 
 ## Installation
 
@@ -113,3 +112,7 @@ http://gongo.github.com/table_beet/demo/index.html
 ### License
 
 see `LICENSE` .
+
+## Credits
+
+This library is forked from [gongo/table_beet](https://github.com/gongo/table_beet). Original Credits goes to *[gongo](https://github.com/gongo)*
