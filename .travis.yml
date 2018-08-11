@@ -4,6 +4,7 @@ rvm:
   - 2.5.0
 gemfile:
   - Gemfile
+  - gemfiles/rspec-3.5.x.gemfile
   - gemfiles/rspec-3.6.x.gemfile
   - gemfiles/rspec-3.7.x.gemfile
 
