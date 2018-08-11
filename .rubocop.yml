@@ -15,3 +15,7 @@ MethodLength:
 
 MutableConstant:
   Enabled: false
+
+Style/StringLiterals:
+  Exclude:
+  - spec/fixtures/steps/*.rb
