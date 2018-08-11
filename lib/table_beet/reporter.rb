@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'table_beet/world'
-require 'table_beet/formatters/text_formatter'
-require 'table_beet/formatters/oneline_formatter'
-require 'table_beet/formatters/html_formatter'
+require "table_beet/world"
+require "table_beet/formatters/text_formatter"
+require "table_beet/formatters/oneline_formatter"
+require "table_beet/formatters/html_formatter"
 
 module TableBeet
   class Reporter
@@ -17,7 +17,7 @@ module TableBeet
     #
     def self.build(config = {})
       type   = config[:format]
-      output = config[:output] || './stepdoc'
+      output = config[:output] || "./stepdoc"
       formatter(type).new(TableBeet::World.scopes, output).flush
     end
 
