@@ -8,7 +8,7 @@ steps_for :test do
   #   | cola  |
   #   | pizza |
   #
-  step "To run the test:" do |table|
+  step 'To run the test:' do |table|
     @tests << table.to_a.flatten
   end
 
@@ -18,7 +18,7 @@ steps_for :test do
   #   | report |
   # Then The test is insufficient
   #
-  step "the test is insufficient" do
+  step 'the test is insufficient' do
     expect(@tests).not_to include(*REQUIRE_TEST)
   end
 end

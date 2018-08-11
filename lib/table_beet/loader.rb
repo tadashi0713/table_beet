@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "pathname"
+require 'pathname'
 
 module TableBeet
   class Loader
     def initialize(config = {})
-      @suffix = config[:suffix] || "_steps.rb"
-      @directory = config[:path] || "./spec"
+      @suffix = config[:suffix] || '_steps.rb'
+      @directory = config[:path] || './spec'
     end
 
     #
@@ -29,7 +29,7 @@ module TableBeet
     private
 
     def glob
-      "**/*" + @suffix
+      '**/*' + @suffix
     end
 
     def pattern

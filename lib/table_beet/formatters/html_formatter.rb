@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "table_beet/formatters/base_formatter.rb"
-require "erb"
+require 'table_beet/formatters/base_formatter.rb'
+require 'erb'
 
 module TableBeet
   module Formatters
@@ -19,7 +19,7 @@ module TableBeet
       def create_index
         erb = ERB.new(File.read(template_output))
 
-        File.open(output, "w") do |f|
+        File.open(output, 'w') do |f|
           f.write erb.result(binding)
         end
       end
@@ -29,23 +29,23 @@ module TableBeet
       end
 
       def template_dir
-        File.dirname(__FILE__) + "/html_template"
+        File.dirname(__FILE__) + '/html_template'
       end
 
       def template_output
-        template_dir + "/index.erb"
+        template_dir + '/index.erb'
       end
 
       def template_metadata_dir
-        template_dir + "/data"
+        template_dir + '/data'
       end
 
       def output
-        directory + "/index.html"
+        directory + '/index.html'
       end
 
       def metadata_dir
-        directory + "/data"
+        directory + '/data'
       end
     end
   end

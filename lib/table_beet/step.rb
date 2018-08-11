@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "method_source"
+require 'method_source'
 
 module TableBeet
   class Step
@@ -21,7 +21,7 @@ module TableBeet
     end
 
     def location
-      File.expand_path(@file) + ":" + @lineno.to_s
+      File.expand_path(@file) + ':' + @lineno.to_s
     end
   end
 end

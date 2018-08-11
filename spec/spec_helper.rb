@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "coveralls"
-require "rspec/core/sandbox"
-require "table_beet"
+require 'coveralls'
+require 'rspec/core/sandbox'
+require 'table_beet'
 Coveralls.wear!
 
-FIXTURES_PATH = File.dirname(__FILE__) + "/fixtures/steps"
-OUTPUT_PATH = File.dirname(__FILE__) + "/stepdoc"
+FIXTURES_PATH = File.dirname(__FILE__) + '/fixtures/steps'
+OUTPUT_PATH = File.dirname(__FILE__) + '/stepdoc'
 
 RSpec.configure do |c|
   c.around(:each) do |ex|

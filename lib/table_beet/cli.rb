@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require "table_beet/version"
-require "table_beet/runner"
-require "slop"
+require 'table_beet/version'
+require 'table_beet/runner'
+require 'slop'
 
 module TableBeet
   class CLI
@@ -22,13 +22,13 @@ module TableBeet
 
     def parse_options
       opts = Slop.parse(help: true, optional_arguments: true) do
-        banner "Usage: table_beet [options]"
-        on :output=, "Directory to output (default: ./stepdoc)"
-        on :path=,   "Directory that contains step file. (default: ./spec)"
-        on :suffix=, "Suffix of step file  (default: _steps.rb)"
-        on :n, :textmode, "Display steps in plain text (No generate HTML)"
-        on :s, :oneline, "Display steps in plain text (short mode)"
-        on :v, :version, "Print this version" do
+        banner 'Usage: table_beet [options]'
+        on :output=, 'Directory to output (default: ./stepdoc)'
+        on :path=,   'Directory that contains step file. (default: ./spec)'
+        on :suffix=, 'Suffix of step file  (default: _steps.rb)'
+        on :n, :textmode, 'Display steps in plain text (No generate HTML)'
+        on :s, :oneline, 'Display steps in plain text (short mode)'
+        on :v, :version, 'Print this version' do
           puts TableBeet::VERSION
           exit
         end

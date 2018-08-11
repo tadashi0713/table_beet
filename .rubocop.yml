@@ -15,6 +15,3 @@ MethodLength:
 
 MutableConstant:
   Enabled: false
-
-StringLiterals:
-  EnforcedStyle: double_quotes
