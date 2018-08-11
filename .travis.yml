@@ -1,9 +1,10 @@
 language: ruby
 rvm:
   - 2.4.*
-  - 2.5.*
+  - 2.5.0
 gemfile:
   - Gemfile
   - gemfiles/rspec-3.6.x.gemfile
+  - gemfiles/rspec-3.7.x.gemfile
 
 script: bundle exec rake spec && bundle exec rspec --tag before_load spec

@@ -18,7 +18,7 @@ test/version_tmp
 tmp
 vendor
 .DS_Store
-spec/stepdoc
+stepdoc
 .idea
 *.iml
 .ruby-version

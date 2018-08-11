@@ -16,7 +16,7 @@ describe TableBeet::Step do
 
   describe '#source' do
     it 'should return step source' do
-      expect(step.source).to include("expect(name).to eq('Kuririn')")
+      expect(step.source).to include('expect(name).to eq("Kuririn")')
     end
   end
 
