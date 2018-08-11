@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'English'
-require 'rspec/core/version'
 
 module TableBeet
   class World
@@ -27,11 +26,7 @@ module TableBeet
     end
 
     def self.include_modules
-      if RSpec::Core::Version::STRING >= '3.2.0'
-        RSpec.configuration.instance_variable_get(:@include_modules).items_and_filters
-      else
-        RSpec.configuration.include_or_extend_modules.map { |_, mod, tags| [mod, tags] }
-      end
+      RSpec.configuration.instance_variable_get(:@include_modules).items_and_filters
     end
 
     class Space
