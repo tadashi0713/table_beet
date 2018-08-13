@@ -10,7 +10,7 @@ describe TableBeet::Step do
 
   describe '#id' do
     it 'should return method id' do
-      expect(step.id).to be_instance_of(Integer)
+      expect(step.id).to be_instance_of(Integer) || be_instance_of(Fixnum)
     end
   end
 
