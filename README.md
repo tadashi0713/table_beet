@@ -1,6 +1,6 @@
-# TableBeet
+# TableBeet2
 
-TableBeet is reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
+Reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
 
 [![Build Status](https://travis-ci.org/tadashi0713/table_beet.svg?branch=master)](https://travis-ci.org/tadashi0713/table_beet)
 [![Code Climate](https://codeclimate.com/github/tadashi0713/table_beet.png)](https://codeclimate.com/github/tadashi0713/table_beet)
@@ -12,15 +12,9 @@ Ruby 2.4.0 or later
 
 ## Installation
 
-### RubyGems
-
-    $ gem install table_beet
-
-### Bundler
-
 Add this line to your application's Gemfile:
 
-    gem 'table_beet'
+    gem 'table_beet2', git: 'git@github.com:tadashi0713/table_beet2.git'
 
 And then execute:
 
