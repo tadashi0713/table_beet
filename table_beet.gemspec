@@ -5,13 +5,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'table_beet/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'table_beet'
+  gem.name          = 'table_beet2'
   gem.version       = TableBeet::VERSION
   gem.authors       = ['Tadashi Nemoto']
   gem.email         = ['tadashi.nemoto0713@gmail.com']
   gem.description   = 'Reference generator for Turnip steps of exists'
   gem.summary       = 'Reference generator for Turnip steps of exists'
-  gem.homepage      = 'https://github.com/tadashi0713/table_beet'
+  gem.homepage      = 'https://github.com/tadashi0713/table_beet2'
 
   gem.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
