@@ -1,5 +1,5 @@
 language: ruby
-install: bundle install --without production --deployment
+install: bundle install --without production
 cache:
   directories:
   - vendor/bundle
