@@ -1,5 +1,8 @@
 language: ruby
-cache: bundler
+install: bundle install --without production --deployment
+cache:
+  directories:
+  - vendor/bundle
 rvm:
   - 2.2.*
   - 2.3.*
@@ -12,6 +15,6 @@ gemfile:
   - gemfiles/rspec-3.7.x.gemfile
 matrix:
   allow_failures:
-    - gemfile: Gemfile
+    - rvm: 2.5.0
 
 script: bundle exec rake spec && bundle exec rspec --tag before_load spec
