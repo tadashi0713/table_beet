@@ -94,7 +94,7 @@
                       <i class="icon-book"></i> <%= ERB::Util.h(step.location) %>
                   </a></p>
                   <div id="modal-<%= step.id %>" class="modal">
-                    <big><pre><%= step.source %></pre></big>
+                    <big><pre class="prettyprint"><code class="language-rb"><%= step.source %></code></pre></big>
                   </div>
                 </td>
               </tr>
@@ -119,6 +119,7 @@
     <script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js"></script>
     <script type="text/javascript" src="./js/groundwork.js"></script>
     <script type="text/javascript" src="./js/jquery.quicksearch.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
     <script type="text/javascript">
       $(function () {
           $('th.step_name').each(function() {
