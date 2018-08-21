@@ -17,4 +17,4 @@ matrix:
   allow_failures:
     - rvm: 2.5.0
 
-script: bundle exec rubocop && bundle exec rake spec && bundle exec rspec --tag before_load spec
+script: bundle exec rubocop -c .rubocop.yml && bundle exec rake spec && bundle exec rspec --tag before_load spec
