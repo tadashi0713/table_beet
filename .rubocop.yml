@@ -19,3 +19,6 @@ MutableConstant:
 Style/StringLiterals:
   Exclude:
   - spec/fixtures/steps/*.rb
+
+UnifiedInteger:
+  Enabled: false
