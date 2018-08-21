@@ -1,156 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-  <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>TableBeet2 &hearts; List of step</title>
-    <!-- Modernizr -->
-    <script src="./js/libs/modernizr-2.6.2.min.js"></script>
-    <!-- jQuery -->
-    <script type="text/javascript" src="./js/libs/jquery-1.8.2.min.js"></script>
-    <!-- GroundworkCSS -->
-    <link type="text/css" rel="stylesheet" href="./css/groundwork.css">
-    <!--[if IE]>
-        <link type="text/css" rel="stylesheet" href="./css/groundwork-ie.css">
-        <![endif]-->
-    <!--[if lt IE 9]>
-        <script type="text/javascript" src="./js/libs/html5shiv.min.js"></script>
-        <![endif]-->
-    <!--[if IE 7]>
-        <link type="text/css" rel="stylesheet" href="./css/font-awesome-ie7.min.css">
-        <![endif]-->
-    <script type="text/javascript">
-      // fallback if SVG unsupported
-      Modernizr.load({
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>TableBeet2 &hearts; List of step</title>
+  <!-- Modernizr -->
+  <script src="./js/libs/modernizr-2.6.2.min.js"></script>
+  <!-- jQuery -->
+  <script type="text/javascript" src="./js/libs/jquery-1.8.2.min.js"></script>
+  <!-- GroundworkCSS -->
+  <link type="text/css" rel="stylesheet" href="./css/groundwork.css">
+  <script type="text/javascript">
+    // fallback if SVG unsupported
+    Modernizr.load({
       test: Modernizr.svg,
       nope: './css/no-svg.css'
-      });
-      // polyfill for HTML5 placeholders
-      Modernizr.load({
+    })
+    // polyfill for HTML5 placeholders
+    Modernizr.load({
       test: Modernizr.input.placeholder,
       nope: [
-      './css/placeholder_polyfill.css',
-      './js/libs/placeholder_polyfill.jquery.js'
+        './css/placeholder_polyfill.css',
+        './js/libs/placeholder_polyfill.jquery.js'
       ]
-      });
-    </script>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="two sixth padded align-left">
-            <div class="align-left">
-              <h1>TableBeet2</h1>
-            </div>
-          </div>
-          <div class="two sixth padded align-right" id="loading">
-            <i class="icon-spinner icon-2x icon-spin"  style="display: none;"></i>
-          </div>
-          <div class="two sixth padded align-right">
-            <input type="text" id="keyword" name="keyword" placeholder="Search step name">
-          </div>
+    })
+  </script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="two sixth padded align-left">
+        <div class="align-left">
+          <h1>TableBeet2</h1>
         </div>
       </div>
-    </header>
-    <div class="container">
-
-      <article class="row">
-        <aside class="one fourth padded border-right">
-          <h1><i class="icon-list-ul"></i> Scopes</h1>
-          <ul class="list">
-            <% scopes.keys.each do |scope_name| %>
-            <li class="big"><a href="#<%= ERB::Util.h(scope_name) %>"><%= ERB::Util.h(scope_name) %></a></li>
-            <% end %>
-          </ul>
-        </aside>
-        <section class="three fourths padded">
-          <h1><i class="icon-th-large"></i> Step list</h1>
-
-          <% scopes.each do |scope, steps| %>
-          <div class="row scope_title">
-            <div class="padded">
-              <h2><i class="icon-caret-right"></i> <a name="<%= ERB::Util.h(scope) %>"><%= ERB::Util.h(scope) %></a></h2>
-            </div>
-          </div>
-          <table class="scope">
-            <thead>
-              <tr>
-                <th>Step name</th>
-                <td>Defined file (with line number)</td>
-              </tr>
-            </thead>
-            <tbody>
-              <% steps.each do |step| %>
-              <tr>
-                <th class="step_name"><%= ERB::Util.h(step.name) %></th>
-                <td>
-                  <p><a href="#modal-<%= step.id %>">
-                      <i class="icon-book"></i> <%= ERB::Util.h(step.location) %>
-                  </a></p>
-                  <div id="modal-<%= step.id %>" class="modal">
-                    <big><pre><%= step.source %></pre></big>
-                  </div>
-                </td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-          <% end %>
-
-        </section>
-      </article>
-
-      <footer class="footer row">
-        <div class="one half align-left">
-          <p>&copy; 2018 Tadashi Nemoto.</p>
-        </div>
-        <div class="one half align-right">
-          <p>Powered by <a href="https://groundworkcss.github.io/">GroundworkCSS</a></p>
-        </div>
-      </footer>
+      <div class="two sixth padded align-right" id="loading">
+        <i class="icon-spinner icon-2x icon-spin" style="display: none;"></i>
+      </div>
+      <div class="two sixth padded align-right">
+        <input type="text" id="keyword" name="keyword" placeholder="Search step name">
+      </div>
     </div>
-    <!-- scripts -->
-    <script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js"></script>
-    <script type="text/javascript" src="./js/groundwork.js"></script>
-    <script type="text/javascript" src="./js/jquery.quicksearch.js"></script>
-    <script type="text/javascript">
-      $(function () {
-          $('th.step_name').each(function() {
-              var decoration = $(this).text().replace(/(:[\w]+)/g, function() { return "<code>" + RegExp.$1 + "</code>"; });
-              $(this).html(decoration);
-          });
+  </div>
+</header>
+<div class="container">
 
-         $('input#keyword').quicksearch('table.scope tbody tr', {
-             'delay'    : 100,
-             'selector' : 'th',
-             'loader'   : 'div#loading i',
+  <article class="row">
+    <aside class="one fourth padded border-right">
+      <h1><i class="icon-list-ul"></i> Scopes</h1>
+      <ul class="list">
+        <% scopes.keys.each do |scope_name| %>
+          <li class="big"><a href="#<%= ERB::Util.h(scope_name) %>"><%= ERB::Util.h(scope_name) %></a></li>
+        <% end %>
+      </ul>
+    </aside>
+    <section class="three fourths padded">
+      <h1><i class="icon-th-large"></i> Step list</h1>
 
-             'show' : function () {
-                 $(this).show();
-                 var table = $(this).closest('table.scope');
-                 var title = table.prev('div.scope_title');
-                 table.show();
-                 title.show();
-             },
+      <% scopes.each do |scope, steps| %>
+        <div class="row scope_title">
+          <div class="padded">
+            <h2><i class="icon-caret-right"></i> <a name="<%= ERB::Util.h(scope) %>"><%= ERB::Util.h(scope) %></a></h2>
+          </div>
+        </div>
+        <table class="scope">
+          <thead>
+          <tr>
+            <th>Step name</th>
+            <td>Defined file (with line number)</td>
+          </tr>
+          </thead>
+          <tbody>
+          <% steps.each do |step| %>
+            <tr>
+              <th class="step_name"><%= ERB::Util.h(step.name) %></th>
+              <td>
+                <p><a href="#modal-<%= step.id %>">
+                  <i class="icon-book"></i> <%= ERB::Util.h(step.location) %>
+                </a></p>
+                <div id="modal-<%= step.id %>" class="modal">
+                  <big>
+                    <pre class="prettyprint"><code class="language-rb"><%= step.source %></code></pre>
+                  </big>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      <% end %>
 
-             'hide' : function () {
-                 $(this).hide();
-                 if ($(this).siblings(':visible').size() == 0) {
-                     var table = $(this).closest('table.scope');
-                     var title = table.prev('div.scope_title');
-                     table.hide();
-                     title.hide();
-                 }
-             }
-         });
+    </section>
+  </article>
 
-      });
-    </script>
-  </body>
+  <footer class="footer row">
+    <div class="one half align-left">
+      <p>&copy; 2018 Tadashi Nemoto.</p>
+    </div>
+    <div class="one half align-right">
+      <p>Powered by <a href="https://groundworkcss.github.io/">GroundworkCSS</a></p>
+    </div>
+  </footer>
+</div>
+<!-- scripts -->
+<script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js"></script>
+<script type="text/javascript" src="./js/groundwork.js"></script>
+<script type="text/javascript" src="./js/jquery.quicksearch.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+<script type="text/javascript">
+  $(function () {
+    $('th.step_name').each(function () {
+      var decoration = $(this).text().replace(/(:[\w]+)/g, function () {
+        return '<code>' + RegExp.$1 + '</code>'
+      })
+      $(this).html(decoration)
+    })
+
+    $('input#keyword').quicksearch('table.scope tbody tr', {
+      'delay': 100,
+      'selector': 'th',
+      'loader': 'div#loading i',
+
+      'show': function () {
+        $(this).show()
+        var table = $(this).closest('table.scope')
+        var title = table.prev('div.scope_title')
+        table.show()
+        title.show()
+      },
+
+      'hide': function () {
+        $(this).hide()
+        if ($(this).siblings(':visible').size() == 0) {
+          var table = $(this).closest('table.scope')
+          var title = table.prev('div.scope_title')
+          table.hide()
+          title.hide()
+        }
+      }
+    })
+
+  })
+</script>
+</body>
 </html>
