@@ -6,7 +6,7 @@ Reference generator for [turnip](https://github.com/jnicklas/turnip) steps of ex
 
 # Requirements
 
-Ruby 2.3.0 or later
+Ruby 2.2.0 or later
 
 ## Installation
 
