@@ -1,9 +1,12 @@
 # TableBeet2
 
-Reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
-
 [![Build Status](https://travis-ci.org/tadashi0713/table_beet2.svg?branch=master)](https://travis-ci.org/tadashi0713/table_beet2)
 [![Coverage Status](https://coveralls.io/repos/github/tadashi0713/table_beet2/badge.svg?branch=master)](https://coveralls.io/github/tadashi0713/table_beet2?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc738d6a36a94a54a8f030dc03849983)](https://www.codacy.com/app/tadashi0713/table_beet2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tadashi0713/table_beet2&amp;utm_campaign=Badge_Grade)
+
+Reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
+
+![Screenshot](./images/screenshot.jpg)
 
 # Requirements
 
